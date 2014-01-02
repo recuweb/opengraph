@@ -117,7 +117,7 @@ class OpenGraph implements Iterator
             		if($tag->hasAttribute('property') && 
             		     strpos($tag->getAttribute('property'),'fb:') === 0){
 				$key = strtr(substr($tag->getAttribute('property'), 3), '-', '_');
-				$page->_values[$key] = $tag->getAttribute('content');
+				$page->_values['fb_'.$key] = $tag->getAttribute('content');
 			}
 			
 		}
